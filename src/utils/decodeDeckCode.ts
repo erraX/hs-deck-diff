@@ -11,8 +11,13 @@ import { decode, DeckDefinition } from 'deckstrings';
 export const decodeDeckCode = (deckCodeStr: string) => {
 	let deck: DeckDefinition | null = null;
 
+	if (typeof deckCodeStr !== 'string') {
+		return deck;
+	}
+
 	try {
-		deck = decode(deckCodeStr);
+		// trim comment which starts with '#'
+		deck = decode(deckCodeStr.replace(/^#.*/gm, ''));
 	}
 	catch (ex) {
 		console.error('decode deck code error:', ex);

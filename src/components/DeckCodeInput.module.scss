@@ -1,0 +1,15 @@
+.DeckCodeInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.Input {
+  width: 247px;
+  height: 80px;
+}
+
+.InputErrorHint {
+  color: red;
+}

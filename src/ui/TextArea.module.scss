@@ -1,0 +1,17 @@
+.textarea {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  resize: none;
+  outline: 0;
+
+  &:hover {
+    border-color: blue;
+  }
+}
+
+.error {
+  border-color: red;
+
+  &:hover {
+    border-color: red;
+  }
+}
